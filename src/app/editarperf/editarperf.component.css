@@ -1,0 +1,229 @@
+/* Menu lateral */
+.dashboard-sidenav {
+    width: 350px;
+    background-color: #112234;
+    color: #fff;
+    padding: 0px;
+    box-shadow: 5px 0 5px rgba(0, 65, 86, 0.2);
+  }
+  
+  .dashboard-buttons li {
+    list-style: none;
+    margin: 20px 0;
+  }
+  
+  .dashboard-buttons button {
+    width: 90%;
+    padding: 25px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3d435f;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .dashboard-buttons button:hover {
+    background-color: #1abc9c;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dashboard-buttons button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard-buttons button span {
+    margin-left: 50px;
+  }
+  
+  /* Estilo de la barra de navegación */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 70px;
+    padding: 15px 20px;
+    background-color: #112234;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+    text-decoration: none;
+  }
+  
+  .navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar .menu li a {
+    color: #ff2727;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .navbar .menu li a:hover {
+    color: #ffecb7;
+  }
+
+  .user-avatar {
+    width: 70px;
+    height:70px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 70px;
+  }
+  
+  /* Contenedor principal */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height:100vh;
+  }
+  
+  .mat-menupanel {
+    min-width: 300px;
+    max-width: 4000px;
+    font-size: 20px;
+    border-radius: 10px;
+    /* background-color: white; */
+  }
+  
+  .mat-menui {
+    border-radius: 10px; 
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 1px;
+    cursor:inherit;
+    text-align: center;
+    width: 180px;
+    color: #000000;
+  }
+  
+  .mat-menu-item:hover {
+    /* background-color: rgb(177, 255, 124); */
+    color: #ffffff;
+  }
+  
+  /* Estilo para la tabla */
+  .menu-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 150px;
+    color: pink;
+    background-color: black;
+  }
+  
+  .mat-form-field {
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  /* Botón de color */
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 90px;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .sidenav-container {
+     height: auto;
+     background-image: url("/fdash.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+   }
+   
+   .menuizq{
+    width: 1000px;
+    height: 1000px;
+    background-color: blueviolet;
+   }
+   button.icono :hover{
+    background-color: #112234;
+  }
+   
+   /* Estilos generales para la tabla */
+
+.cuerpo{
+    max-width: 700px;
+}
+
+#titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    padding: 15px;
+}
+#subtitulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+  #espacio{
+      padding: 5px;
+  }
+  .row{
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+  }
+  .full{
+      flex: 2;
+  }
+  .imagen{
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      padding: 10px;
+  }
+  .main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  #aceptar{
+    color: black;
+    font-weight: bold;
+    background: rgb(139, 213, 139);
+    font-size: 17px;
+  }
+  #cambiar{
+    color: black;
+    font-weight: bold;
+    background: rgb(123, 216, 252);
+    font-size: 17px;
+  }
+  #cancelar{
+    color: black;
+    font-weight: bold;
+    background: rgb(123, 216, 252);
+    font-size: 17px;
+  }
+  .espacio{
+    padding-right: 10px;
+  }

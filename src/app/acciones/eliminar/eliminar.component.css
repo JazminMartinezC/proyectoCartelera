@@ -1,0 +1,41 @@
+h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.espacio{
+    padding-bottom: 20px;
+}
+.fondo{
+    background:black;
+}
+
+#aceptar{
+    color: black;
+    font-weight: bold;
+    background: red;
+    font-size: 17px;
+}
+#cancelar{
+    color: black;
+    font-weight: bold;
+    background: white;
+    font-size: 17px;
+}
+.titulo{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}

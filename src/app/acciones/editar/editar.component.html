@@ -1,0 +1,47 @@
+<div class="fondo">
+    <h2 mat-dialog-title class="titulo">{{data.name}}</h2>
+<mat-dialog-content>
+    <h3>Puede modificar cualquier elemento de la película, si no guarda los cambios y cierra la ventana estos cambios se perderán.</h3>
+    <form class="formulario">
+        <div class="row">
+            <mat-form-field appearance="outline" style="color: white;">
+                <mat-label>Título</mat-label>
+                <input matInput type="text" value={{peli.nombre}} [(ngModel)]="peli.nombre" [ngModelOptions]="{standalone: true}" style="color: white;">
+            </mat-form-field>
+            <mat-error *ngIf="errorTitulo">El título no es válido</mat-error>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Año de la filmación</mat-label>
+                <input matInput type="text" value={{peli.anio_filmacion}} [(ngModel)]="peli.anio_filmacion" [ngModelOptions]="{standalone: true}"  style="color: white;">
+            </mat-form-field>
+            <mat-error *ngIf="errorFecha">Fecha incorrecta</mat-error>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" class="full">
+                <mat-label>Género principal</mat-label>
+                <input matInput type="text" value={{peli.genero_principal}} [(ngModel)]="peli.genero_principal" [ngModelOptions]="{standalone: true}"  style="color: white;">
+            </mat-form-field>
+            <mat-error *ngIf="errorGeneros">Datos incorrectos</mat-error>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" class="full">
+                <mat-label>Descripción</mat-label>
+                <textarea matInput rows="5" type="text" value={{peli.descripcion}} [(ngModel)]="peli.descripcion" [ngModelOptions]="{standalone: true}"  style="color: white;"></textarea>
+            </mat-form-field>
+            <mat-error *ngIf="errorDescripcion">Campo vacío</mat-error>
+        </div>
+        <p>Si gusta cambiar a imagen deberá colocar la URL de la nueva imagen.</p>
+        <div class="row">
+            <mat-form-field appearance="outline" class="full">
+                <mat-label>URL de imagen</mat-label>
+                <textarea matInput rows="2" type="text" value={{peli.poster}} [(ngModel)]="peli.poster" [ngModelOptions]="{standalone: true}"  style="color: white;"></textarea>
+            </mat-form-field>
+            <mat-error *ngIf="errorUrl">Campo vacío</mat-error>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="guardar()" id="aceptar">Guardar</button>
+    <button mat-button (click)="cerrar()" id="cancelar">Cerrar</button>
+</mat-dialog-actions>
+</div>

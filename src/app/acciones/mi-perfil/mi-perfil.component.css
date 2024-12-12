@@ -1,0 +1,47 @@
+.linea{
+    display: inline;
+}
+h3{
+    color: black;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 20px;
+    font-weight: bold;
+}
+p{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.imagen{
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+    padding: 20px;    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.espacio{
+    padding-top: 20px;
+}
+.fondo{
+    background-image: url('/usuario.jpg');
+    background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+.booton{
+    color: black;
+    font-weight: bold;
+    background: white;
+    font-size: 17px;
+}
+.titulo{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}

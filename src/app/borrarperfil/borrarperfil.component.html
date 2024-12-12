@@ -1,0 +1,21 @@
+<div class="fondo">
+    <h2 class="titulo" mat-dialog-title>{{data.name}}</h2>
+    <mat-dialog-content>
+        <p>¿Estas seguro de eliminar tu perfil, perderas el acceso a nuestra cartelera estimado {{data.usuario.nombre}} ?</p>
+        <br>
+        <p>Ingresa tu contraseña para confirmar eliminación de cuenta.</p>
+    <form class="formulario">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password" [(ngModel)]="this.contra" [ngModelOptions]="{standalone: true}" style="color: white;">
+            </mat-form-field>
+            <mat-error *ngIf="errcontra" style="color: white; font-weight: bold;">Contraseña incorrecta</mat-error>
+        </div>
+    </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button id="aceptar" (click)="borrar()">Aceptar</button>
+        <button mat-button id="cancelar" (click)="cerrar()">Cancelar</button>
+    </mat-dialog-actions>
+    </div>

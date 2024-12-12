@@ -1,0 +1,42 @@
+.fondo{
+    background:black;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+}
+.row{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.full{
+    flex: 2;
+}
+p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.titulo{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+#aceptar{
+    color: black;
+    font-weight: bold;
+    background: rgb(139, 213, 139);
+    font-size: 17px;
+}
+#cancelar{
+    color: black;
+    font-weight: bold;
+    background: white;
+    font-size: 17px;
+}
+mat-label{
+    color: white;
+}

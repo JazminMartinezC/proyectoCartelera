@@ -1,0 +1,76 @@
+<nav class="navbar">
+    <div style="color: white;">
+      <h1>
+        <br>
+        <button mat-button (click)="sidenav.toggle()"><img src="pmenu.jpg" width="50px"></button>
+        <strong>Series y Peliculas
+            <span class="user-info" *ngIf="usuario">Hola {{ usuario.nombre }}.</span>
+        </strong>
+      </h1>
+    </div>
+    <div class=""*ngIf="usuario">
+        <button mat-button class="icono" [matMenuTriggerFor]="menu1">
+            <img [src]="usuario.avatar" alt="Avatar" class="user-avatar" />
+        </button>
+        <mat-menu #menu1="matMenu" yPosition="above">
+            <button mat-menu-item class="mat-menui" (click)="miPerfil()">Mi perfil</button>
+            <button mat-menu-item class="mat-menui" (click)="salir()">Cerrar Sesión</button>
+            <button mat-menu-item class="mat-menui" (click)="eliperf()">Eliminar mi perfil</button>
+        </mat-menu>
+    </div>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="dashboardOpen" class="dashboard-sidenav">
+        <ul class="dashboard-buttons">
+            <br>
+            <li><button mat-button (click)="home()">Inicio</button></li>
+            <li><button mat-button>Editar Perfil</button></li>
+            <li><button mat-button (click)="addus();">Agregar usuario</button></li>
+            <li><button mat-button (click)="addpeli()">Agregar Película</button></li>
+            <li><button mat-button (click)="salir();">Cerrar Sesión</button></li>
+        </ul>
+    </mat-sidenav>
+
+    <!-- Contenido principal -->
+    <div class="main-container">  
+        <mat-card appearance="outlined" class="cuerpo">
+            <mat-card-header>
+                <mat-card-title id="titulo">Editar Perfil</mat-card-title>
+                <mat-card-subtitle id="subtitulo">Asegurese de guardar los cambios de lo contrario no se aplicarán.</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <div class="main"><img [src]="us.avatar" alt="avatar" class="imagen"></div>
+                <form class="formulario">
+                    <span id="espacio"></span>
+                    <div class="row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Nombre de usuario</mat-label>
+                            <input matInput type="text" value={{us.nombre}} [(ngModel)]="us.nombre" [ngModelOptions]="{standalone: true}">
+                        </mat-form-field>
+                        <mat-error *ngIf="errornombre">Campo no válido</mat-error>
+                    </div>
+                    <p>Si gusta cambiar la imagen deberá colocar la URL de la nueva imagen.</p>
+                    <div class="row">
+                        <mat-form-field appearance="outline" class="full">
+                            <mat-label>URL de imagen</mat-label>
+                            <textarea matInput rows="2" type="text" value={{us.avatar}} [(ngModel)]="us.avatar" [ngModelOptions]="{standalone: true}"></textarea>
+                        </mat-form-field>
+                        <mat-error *ngIf="erroravatar">Datos incorrectos</mat-error>
+                    </div>                
+                </form>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button mat-button (click)="guardar()" id="aceptar">Guardar</button>
+                <span class="espacio"></span>
+                <button mat-button (click)="cambiar()" id="cambiar">Cambiar contraseña</button>
+                <span class="espacio"></span>
+                <button mat-button (click)="cancelar()" id="cancelar">Cancelar</button>
+            </mat-card-actions>
+        </mat-card>
+        
+    </div>
+  </mat-sidenav-container>
